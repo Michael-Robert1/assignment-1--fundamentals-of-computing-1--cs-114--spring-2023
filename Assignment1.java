@@ -18,7 +18,7 @@ public class Assignment1 {
       //Declare and Initialize variables
       int randInt;
       float tempF, tempC;
-      String userString, shortenedString, temp;
+      String userString, shortenedString, tempString;
 
       //Create new objects
       Scanner scan = new Scanner(System.in);
@@ -40,24 +40,27 @@ public class Assignment1 {
 
       //Prompt for an integer temperature in Fahrenheit
       System.out.println("Enter a temperature in Fahrenheit:");
-      System.out.println("");
       tempF = scan.nextInt();
+      System.out.println("");
 
       //Convert Fahrenheit to Celsius and keep only 1 decimal place
       tempC = (((tempF-32)*5)/9);
-      temp = fmt.format(tempC);
+      tempString = fmt.format(tempC);
 
       //Prompt for a random 5 letter string, save to userString
       System.out.println("Enter a random 5-letter string:");
-      System.out.println("");
       userString = scan.next();
+      System.out.println("");
 
       //Ensure the previously entered string is 5 characters long
       while(userString.length() != 5){
-        System.out.println("Please make sure your string has 5 letters!");
-        System.out.println("Enter a random 5-letter string:");
         System.out.println("");
+        System.out.println("**Please make sure your string has 5 letters!**");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("Enter a random 5-letter string:");
         userString = scan.next();
+        System.out.println("");
       }
 
       //Remove first and last characters of userString
@@ -74,7 +77,8 @@ public class Assignment1 {
       System.out.println("");
 
       //Print new string
-      System.out.println(temp + lastChar + middleChar + firstChar + randInt);
+      System.out.println(tempString + lastChar + middleChar + firstChar +
+      randInt);
       System.out.println("");
       System.out.println("");
 
